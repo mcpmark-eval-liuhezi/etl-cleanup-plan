@@ -1,11 +1,11 @@
 # effort_calc.py - ETL cleanup rollout effort calculation
 
-Rerun this script after changing an estimate and it will recompute:
-  - base total: the sum of the four work-package estimates
-  - contingency: 15% on top of the base total
-  - grand total: base + contingency
-
-All numbers are rounded to one decimal place.
+# Rerun this script after changing an estimate and it will recompute:
+#   - base total: the sum of the four work-package estimates
+#   - contingency: 15% on top of the base total
+#   - grand total: base + contingency
+#
+# All numbers are rounded to one decimal place.
 
 import pandas as pd
 
@@ -29,6 +29,7 @@ def main() -> None:
     print(f"Base total:    {base_total:.1f} person-days")
     print(f"Contingency:   {contingency:.1f} person-days (15% of base total)")
     print(f"Grand total:   {grand_total:.1f} person-days")
+
 
 if __name__ == "__main__":
     main()
